@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+<!--
+data = {
+        "nsfw": "Jane",
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+        }
+-->
+
+{% block content %}
+
+<table class="mui-table mui-table--bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>religious</th>
+        <th>political</th>
+        <th>racist</th>
+        <th>sexist</th>
+        <th>explicit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+        {% for _value in data %}
+        <tr>
+            <td>{{ _value.nsfw }}</td>
+            <td>{{ _value.religious }}</td>
+            <td>{{ _value.political }}</td>
+            <td>{{ _value.racist }}</td>
+            <td>{{ _value.sexist }}</td>
+            <td>{{ _value.explicit }}</td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+  </table>
+
+  {% endblock %}
